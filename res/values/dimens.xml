@@ -1,0 +1,29 @@
+<resources>
+    
+    <!-- GENERAL -->
+    <dimen name="general_stroke_size">5sp</dimen>
+
+    <!-- JUNGLE -->
+    <dimen name="jungle_icon_size">50sp</dimen>
+    <dimen name="jungle_text_size">20sp</dimen>
+    <dimen name="jungle_margin">10sp</dimen>
+    
+    <!-- PLAYER -->
+    <dimen name="player_icon_size">50sp</dimen>
+    <dimen name="player_skill_size">25sp</dimen>
+    <dimen name="player_text_spell_size">20sp</dimen>
+    <dimen name="player_text_skill_size">10sp</dimen>
+    <dimen name="player_margin">10sp</dimen>
+    
+    <!-- SPELL -->
+    <dimen name="spell_icon_size">50sp</dimen>
+    <dimen name="spell_text_size">20sp</dimen>
+    <dimen name="spell_margin">10sp</dimen>
+    
+    <!-- CHAMPION -->
+	<dimen name="champion_icon_size">50sp</dimen>
+    <dimen name="champion_margin">10sp</dimen>
+    
+    
+    
+</resources>

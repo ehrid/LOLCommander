@@ -1,0 +1,13 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/item_champion_pic"
+        android:layout_width="@dimen/champion_icon_size"
+        android:layout_height="@dimen/champion_icon_size"
+        android:layout_margin="@dimen/champion_margin"
+        android:src="@drawable/champion_ahri" />
+
+</LinearLayout>

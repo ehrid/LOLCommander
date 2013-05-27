@@ -1,0 +1,257 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/jungle_margin" >
+
+            <ImageView
+                android:id="@+id/jungleDragon"
+                android:layout_width="@dimen/jungle_icon_size"
+                android:layout_height="@dimen/jungle_icon_size"
+                android:src="@drawable/jungle_dragon" />
+
+            <TextView
+                android:id="@+id/jungleDragonTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/jungle_text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/jungle_margin" >
+
+            <ImageView
+                android:id="@+id/jungleRed1"
+                android:layout_width="@dimen/jungle_icon_size"
+                android:layout_height="@dimen/jungle_icon_size"
+                android:src="@drawable/jungle_red" />
+
+            <TextView
+                android:id="@+id/jungleRed1Timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/jungle_text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/jungle_margin" >
+
+            <ImageView
+                android:id="@+id/jungleBlue1"
+                android:layout_width="@dimen/jungle_icon_size"
+                android:layout_height="@dimen/jungle_icon_size"
+                android:src="@drawable/jungle_blue" />
+
+            <TextView
+                android:id="@+id/jungleBlue1Timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/jungle_text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+           android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/jungle_margin" >
+
+            <ImageView
+                android:id="@+id/jungleWard1"
+                android:layout_width="@dimen/jungle_icon_size"
+                android:layout_height="@dimen/jungle_icon_size"
+                android:src="@drawable/jungle_ward" />
+
+            <TextView
+                android:id="@+id/jungleWard1Timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/jungle_text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/jungle_margin" >
+
+            <ImageView
+                android:id="@+id/jungleWard2"
+                android:layout_width="@dimen/jungle_icon_size"
+                android:layout_height="@dimen/jungle_icon_size"
+                android:src="@drawable/jungle_ward" />
+
+            <TextView
+                android:id="@+id/jungleWard2Timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/jungle_text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/jungle_margin" >
+
+            <ImageView
+                android:id="@+id/jungleWard3"
+                android:layout_width="@dimen/jungle_icon_size"
+                android:layout_height="@dimen/jungle_icon_size"
+                android:src="@drawable/jungle_ward" />
+
+            <TextView
+                android:id="@+id/jungleWard3Timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/jungle_text_size" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/jungle_margin" >
+
+            <ImageView
+                android:id="@+id/jungleBaron"
+                android:layout_width="@dimen/jungle_icon_size"
+                android:layout_height="@dimen/jungle_icon_size"
+                android:src="@drawable/jungle_baron" />
+
+            <TextView
+                android:id="@+id/jungleBaronTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/jungle_text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/jungle_margin" >
+
+            <ImageView
+                android:id="@+id/jungleRed2"
+                android:layout_width="@dimen/jungle_icon_size"
+                android:layout_height="@dimen/jungle_icon_size"
+                android:src="@drawable/jungle_red" />
+
+            <TextView
+                android:id="@+id/jungleRed2Timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/jungle_text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/jungle_margin" >
+
+            <ImageView
+                android:id="@+id/jungleBlue2"
+                android:layout_width="@dimen/jungle_icon_size"
+                android:layout_height="@dimen/jungle_icon_size"
+                android:src="@drawable/jungle_blue" />
+
+            <TextView
+                android:id="@+id/jungleBlue2Timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/jungle_text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/jungle_margin" >
+
+            <ImageView
+                android:id="@+id/jungleInhibitor1"
+                android:layout_width="@dimen/jungle_icon_size"
+                android:layout_height="@dimen/jungle_icon_size"
+                android:src="@drawable/jungle_inhibitor" />
+
+            <TextView
+                android:id="@+id/jungleInhibitor1Timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/jungle_text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/jungle_margin" >
+
+            <ImageView
+                android:id="@+id/jungleInhibitor2"
+                android:layout_width="@dimen/jungle_icon_size"
+                android:layout_height="@dimen/jungle_icon_size"
+                android:src="@drawable/jungle_inhibitor" />
+
+            <TextView
+                android:id="@+id/jungleInhibitor2Timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/jungle_text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/jungle_margin" >
+
+            <ImageView
+                android:id="@+id/jungleInhibitor3"
+                android:layout_width="@dimen/jungle_icon_size"
+                android:layout_height="@dimen/jungle_icon_size"
+                android:src="@drawable/jungle_inhibitor" />
+
+            <TextView
+                android:id="@+id/jungleInhibitor3Timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/jungle_text_size" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,126 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:background="@drawable/dialog_body"
+    android:padding="@dimen/spell_margin"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/spell_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wybierz czar"
+        android:layout_marginBottom="@dimen/spell_margin"
+        android:textSize="@dimen/spell_text_size" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" >
+
+        <ImageView
+            android:id="@+id/spell_barier"
+            android:layout_width="@dimen/spell_icon_size"
+            android:layout_height="@dimen/spell_icon_size"
+            android:layout_margin="@dimen/spell_margin"
+            android:src="@drawable/spell_barier" />
+
+        <ImageView
+            android:id="@+id/spell_clairvoyance"
+            android:layout_width="@dimen/spell_icon_size"
+            android:layout_height="@dimen/spell_icon_size"
+            android:layout_margin="@dimen/spell_margin"
+            android:src="@drawable/spell_clairvoyance" />
+
+        <ImageView
+            android:id="@+id/spell_clarity"
+            android:layout_width="@dimen/spell_icon_size"
+            android:layout_height="@dimen/spell_icon_size"
+            android:layout_margin="@dimen/spell_margin"
+            android:src="@drawable/spell_clarity" />
+
+        <ImageView
+            android:id="@+id/spell_cleanse"
+            android:layout_width="@dimen/spell_icon_size"
+            android:layout_height="@dimen/spell_icon_size"
+            android:layout_margin="@dimen/spell_margin"
+            android:src="@drawable/spell_cleanse" />
+
+        <ImageView
+            android:id="@+id/spell_exhaust"
+            android:layout_width="@dimen/spell_icon_size"
+            android:layout_height="@dimen/spell_icon_size"
+            android:layout_margin="@dimen/spell_margin"
+            android:src="@drawable/spell_exhaust" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" >
+
+        <ImageView
+            android:id="@+id/spell_flash"
+            android:layout_width="@dimen/spell_icon_size"
+            android:layout_height="@dimen/spell_icon_size"
+            android:layout_margin="@dimen/spell_margin"
+            android:src="@drawable/spell_flash" />
+
+        <ImageView
+            android:id="@+id/spell_garrison"
+            android:layout_width="@dimen/spell_icon_size"
+            android:layout_height="@dimen/spell_icon_size"
+            android:layout_margin="@dimen/spell_margin"
+            android:src="@drawable/spell_garrison" />
+
+        <ImageView
+            android:id="@+id/spell_ghost"
+            android:layout_width="@dimen/spell_icon_size"
+            android:layout_height="@dimen/spell_icon_size"
+            android:layout_margin="@dimen/spell_margin"
+            android:src="@drawable/spell_ghost" />
+
+        <ImageView
+            android:id="@+id/spell_heal"
+            android:layout_width="@dimen/spell_icon_size"
+            android:layout_height="@dimen/spell_icon_size"
+            android:layout_margin="@dimen/spell_margin"
+            android:src="@drawable/spell_heal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" >
+
+        <ImageView
+            android:id="@+id/spell_ignite"
+            android:layout_width="@dimen/spell_icon_size"
+            android:layout_height="@dimen/spell_icon_size"
+            android:layout_margin="@dimen/spell_margin"
+            android:src="@drawable/spell_ignite" />
+
+        <ImageView
+            android:id="@+id/spell_revive"
+            android:layout_width="@dimen/spell_icon_size"
+            android:layout_height="@dimen/spell_icon_size"
+            android:layout_margin="@dimen/spell_margin"
+            android:src="@drawable/spell_revive" />
+
+        <ImageView
+            android:id="@+id/spell_smite"
+            android:layout_width="@dimen/spell_icon_size"
+            android:layout_height="@dimen/spell_icon_size"
+            android:layout_margin="@dimen/spell_margin"
+            android:src="@drawable/spell_smite" />
+
+        <ImageView
+            android:id="@+id/spell_teleport"
+            android:layout_width="@dimen/spell_icon_size"
+            android:layout_height="@dimen/spell_icon_size"
+            android:layout_margin="@dimen/spell_margin"
+            android:src="@drawable/spell_teleport" />
+    </LinearLayout>
+
+</LinearLayout>

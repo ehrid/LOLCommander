@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/commanderAlly1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/player_margin"
+            layout="@layout/item_player" 
+            />
+
+        <include
+            android:id="@+id/commanderAlly2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/player_margin"
+            layout="@layout/item_player" />
+
+        <include
+            android:id="@+id/commanderAlly3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/player_margin"
+            layout="@layout/item_player" />
+
+        <include
+            android:id="@+id/commanderAlly4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/player_margin"
+            layout="@layout/item_player" />
+
+        <include
+            android:id="@+id/commanderAlly5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/player_margin"
+            layout="@layout/item_player" />
+    </LinearLayout>
+    
+    <include
+            android:id="@+id/commanderJungle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/item_jungle" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical" 
+        android:visibility="gone">
+
+        <include
+            android:id="@+id/commanderEmemy1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/player_margin"
+            layout="@layout/item_player" />
+
+        <include
+            android:id="@+id/commanderEmemy2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/player_margin"
+            layout="@layout/item_player" />
+
+        <include
+            android:id="@+id/commanderEmemy3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/player_margin"
+            layout="@layout/item_player" />
+
+        <include
+            android:id="@+id/commanderEmemy4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/player_margin"
+            layout="@layout/item_player" />
+
+        <include
+            android:id="@+id/commanderEmemy5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/player_margin"
+            layout="@layout/item_player" />
+    </LinearLayout>
+
+</LinearLayout>
