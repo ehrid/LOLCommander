@@ -1,7 +1,14 @@
 package com.leagueoflegendscommander.objects;
 
-public class Player {
+import java.io.Serializable;
+
+public class Player implements Serializable{
+	private static final long serialVersionUID = -567698286377935625L;
+
 	public String name;
+	
+	public int level = 1;
+	
 	public int drawablePlayer;
 	public int drawableUlti;
 	public int drawableSpell1;
@@ -19,6 +26,20 @@ public class Player {
 	public int[] cdSkill3;
 	
 	public int CDR = 0;
+	
+	public int getCdUlti(){
+		return cdUlti[level - 1]*(1-CDR);
+	}
+	public int getCdSkill1(){
+		return cdSkill1[level - 1]*(1-CDR);
+	}
+	public int getCdSkill2(){
+		return cdSkill2[level - 1]*(1-CDR);
+	}
+	public int getCdSkill3(){
+		return cdSkill3[level - 1]*(1-CDR);
+	}
+
 	
 	public void setPlayer(String name, int drawablePlayer, int drawableUlti, int drawableSkill1,
 			int drawableSkill2, int drawableSkill3, int[] cdUlti,

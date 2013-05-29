@@ -53,39 +53,38 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:orientation="vertical" 
-        android:visibility="gone">
+        android:orientation="vertical" >
 
         <include
-            android:id="@+id/commanderEmemy1"
+            android:id="@+id/commanderEnemy1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/player_margin"
             layout="@layout/item_player" />
 
         <include
-            android:id="@+id/commanderEmemy2"
+            android:id="@+id/commanderEnemy2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/player_margin"
             layout="@layout/item_player" />
 
         <include
-            android:id="@+id/commanderEmemy3"
+            android:id="@+id/commanderEnemy3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/player_margin"
             layout="@layout/item_player" />
 
         <include
-            android:id="@+id/commanderEmemy4"
+            android:id="@+id/commanderEnemy4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/player_margin"
             layout="@layout/item_player" />
 
         <include
-            android:id="@+id/commanderEmemy5"
+            android:id="@+id/commanderEnemy5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/player_margin"

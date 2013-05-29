@@ -10,10 +10,13 @@
     
     <!-- PLAYER -->
     <dimen name="player_icon_size">50sp</dimen>
-    <dimen name="player_skill_size">25sp</dimen>
+    <dimen name="player_level_margin">25sp</dimen>
+    <dimen name="player_skill_size">23sp</dimen>
     <dimen name="player_text_spell_size">20sp</dimen>
     <dimen name="player_text_skill_size">10sp</dimen>
     <dimen name="player_margin">10sp</dimen>
+    <dimen name="player_space">4sp</dimen>
+    <dimen name="player_space_small">1sp</dimen>
     
     <!-- SPELL -->
     <dimen name="spell_icon_size">50sp</dimen>
@@ -23,7 +26,5 @@
     <!-- CHAMPION -->
 	<dimen name="champion_icon_size">50sp</dimen>
     <dimen name="champion_margin">10sp</dimen>
-    
-    
     
 </resources>

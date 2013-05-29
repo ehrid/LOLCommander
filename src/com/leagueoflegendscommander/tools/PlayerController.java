@@ -42,7 +42,11 @@ public class PlayerController {
 	CountDownTimer playerSpell1Timer;
 	CountDownTimer playerSpell2Timer;
 
-	public void initPlayer() {
+	ImageView playerUltiCancel;
+	ImageView playerSpell1Cancel;
+	ImageView playerSpell2Cancel;
+
+	public void initPlayer(final int playerPosition) {
 		playerPicture = (ImageView) player.findViewById(R.id.playerPicture);
 		playerUlti = (ImageView) player.findViewById(R.id.playerUlti);
 		playerSpell1 = (ImageView) player.findViewById(R.id.playerSpell1);
@@ -71,6 +75,13 @@ public class PlayerController {
 		playerSkill3 = (ImageView) player.findViewById(R.id.playerSkill3);
 		playerSkill4 = (ImageView) player.findViewById(R.id.playerSkill4);
 
+		playerUltiCancel = (ImageView) player
+				.findViewById(R.id.playerUltiCancel);
+		playerSpell1Cancel = (ImageView) player
+				.findViewById(R.id.playerSpell1Cancel);
+		playerSpell2Cancel = (ImageView) player
+				.findViewById(R.id.playerSpell2Cancel);
+
 		playerPicture.setImageDrawable(rootView.getResources().getDrawable(
 				R.drawable.no));
 		playerUlti.setImageDrawable(rootView.getResources().getDrawable(
@@ -91,25 +102,80 @@ public class PlayerController {
 		playerPicture.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				rootView.startHeroSelection();
-
+				rootView.startHeroSelection(playerPosition);
 			}
 		});
-		
-		addBehavior(null);
+
+		playerUltiCancel.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				if (playerUltiTimer != null)
+					playerUltiTimer.cancel();
+				playerUltiCD.setText("");
+			}
+		});
+
+		playerSpell1Cancel.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				if (playerSpell1Timer != null)
+					playerSpell1Timer.cancel();
+				playerSpell1CD.setText("");
+			}
+		});
+
+		playerSpell2Cancel.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				if (playerSpell2Timer != null)
+					playerSpell2Timer.cancel();
+				playerSpell2CD.setText("");
+			}
+		});
+
 	}
 
-	private void addBehavior(Player hero) {
-		playerSkill1CD.setText("");
-		playerSkill2CD.setText("");
-		playerSkill3CD.setText("");
-		playerSkill4CD.setText("");
+	public void addBehavior(final Player hero) {
+
+		if (playerSpell1Timer != null) {
+			playerSpell1Timer.cancel();
+			playerSpell1CD.setText("");
+		}
+		if (playerSpell2Timer != null) {
+			playerSpell2Timer.cancel();
+			playerSpell2CD.setText("");
+		}
+		if (playerUltiTimer != null) {
+			playerUltiTimer.cancel();
+			playerUltiCD.setText("");
+		}
+
+		playerPicture.setImageResource(hero.drawablePlayer);
+		playerSkill1.setImageResource(hero.drawableSkill1);
+		playerSkill2.setImageResource(hero.drawableSkill2);
+		playerSkill3.setImageResource(hero.drawableSkill3);
+		playerUlti.setImageResource(hero.drawableUlti);
+		playerSpell1.setImageResource(hero.drawableSpell1);
+		playerSpell2.setImageResource(hero.drawableSpell2);
+
+		playerSkill1CD.setText(hero.getCdSkill1() + "");
+		playerSkill2CD.setText(hero.getCdSkill2() + "");
+		playerSkill3CD.setText(hero.getCdSkill3() + "");
+		playerLevel.setText(hero.level + "");
 
 		playerLevelUp.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				int level = Integer.parseInt(playerLevel.getText().toString());
-				playerLevel.setText(Math.min(18, ++level) + "");
+				hero.level++;
+				hero.level = Math.min(18, hero.level);
+
+				playerSkill1CD.setText(hero.getCdSkill1() + "");
+				playerSkill2CD.setText(hero.getCdSkill2() + "");
+				playerSkill3CD.setText(hero.getCdSkill3() + "");
+				playerLevel.setText(hero.level + "");
 			}
 		});
 
@@ -117,23 +183,25 @@ public class PlayerController {
 			@Override
 			public void onClick(View v) {
 				playerUltiTimer = rootView.startCD(playerUltiTimer, playerUlti,
-						playerUltiCD, 20000, R.drawable.no, R.drawable.no);
+						playerUltiCD, hero.getCdUlti() * 1000,
+						hero.drawableUlti, hero.drawableUlti);
 			}
 		});
+
 		playerSpell1.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				playerSpell1Timer = rootView.startCD(playerSpell1Timer,
-						playerSpell1, playerSpell1CD, 20000, R.drawable.no,
-						R.drawable.no);
+						playerSpell1, playerSpell1CD, hero.cdSpell1,
+						hero.drawableSpell1, hero.drawableSpell1);
 			}
 		});
 		playerSpell2.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				playerSpell2Timer = rootView.startCD(playerSpell2Timer,
-						playerSpell1, playerSpell2CD, 20000, R.drawable.no,
-						R.drawable.no);
+						playerSpell2, playerSpell2CD, hero.cdSpell2,
+						hero.drawableSpell2, hero.drawableSpell2);
 			}
 		});
 	}
