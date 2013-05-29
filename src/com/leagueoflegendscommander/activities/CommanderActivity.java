@@ -16,6 +16,8 @@ import android.widget.Toast;
 
 import com.leagueoflegendscommander.LOLCApplication;
 import com.leagueoflegendscommander.R;
+import com.leagueoflegendscommander.dialogs.CDRChangeDialog;
+import com.leagueoflegendscommander.objects.Player;
 import com.leagueoflegendscommander.tools.JungleController;
 import com.leagueoflegendscommander.tools.PlayerController;
 
@@ -138,6 +140,51 @@ public class CommanderActivity extends Activity{
 		CommanderActivity.this.startActivity(new Intent(
 				CommanderActivity.this,
 				HeroActivity.class));
+	}
+	
+	public void startCDRChange(int playerPosition){
+		PlayerController pc = ally1;;
+		switch (playerPosition) {
+		case 0:
+			pc = ally1;
+			break;
+		case 1:
+			pc = ally2;
+			break;
+		case 2:
+			pc = ally3;
+			break;
+		case 3:
+			pc = ally4;
+			break;
+		case 4:
+			pc = ally5;
+			break;
+		case 5:
+			pc = enemy1;
+			break;
+		case 6:
+			pc = enemy2;
+			break;
+		case 7:
+			pc = enemy3;
+			break;
+		case 8:
+			pc = enemy4;
+			break;
+		case 9:
+			pc = enemy5;
+			break;
+		}
+		((LOLCApplication) getApplication()).currentlyPicking = pc;
+		
+		new CDRChangeDialog(this, pc.hero.CDR).show();
+	}
+	
+	public void changeCDR(double d){
+		Player player = ((LOLCApplication) getApplication()).currentlyPicking.hero;
+		player.changeCDR(d);
+		((LOLCApplication) getApplication()).currentlyPicking.addBehavior(player);
 	}
 	
 	private boolean pressed = false;

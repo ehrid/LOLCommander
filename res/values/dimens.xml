@@ -27,4 +27,10 @@
 	<dimen name="champion_icon_size">50sp</dimen>
     <dimen name="champion_margin">10sp</dimen>
     
+    <!-- DIALOG -->
+    <dimen name="dialog_button_size">75sp</dimen>
+    <dimen name="dialog_text_size">20sp</dimen>
+    <dimen name="dialog_margin">10sp</dimen>
+    <dimen name="dialog_margin_small">2sp</dimen>
+    
 </resources>

@@ -25,19 +25,24 @@ public class Player implements Serializable{
 	public int[] cdSkill2;
 	public int[] cdSkill3;
 	
-	public int CDR = 0;
+	public double CDR = 0;
 	
 	public int getCdUlti(){
-		return cdUlti[level - 1]*(1-CDR);
+		return (int) (cdUlti[level - 1]*(1-CDR));
 	}
 	public int getCdSkill1(){
-		return cdSkill1[level - 1]*(1-CDR);
+		return (int) (cdSkill1[level - 1]*(1-CDR));
 	}
 	public int getCdSkill2(){
-		return cdSkill2[level - 1]*(1-CDR);
+		return (int) (cdSkill2[level - 1]*(1-CDR));
 	}
 	public int getCdSkill3(){
-		return cdSkill3[level - 1]*(1-CDR);
+		return (int) (cdSkill3[level - 1]*(1-CDR));
+	}
+	
+	public void changeCDR(double c){
+		CDR = c;
+		CDR = Math.max(0, Math.min(0.4, CDR));
 	}
 
 	

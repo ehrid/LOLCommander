@@ -26,7 +26,7 @@ public class PlayerController {
 	ImageView playerSkill1;
 	ImageView playerSkill2;
 	ImageView playerSkill3;
-	ImageView playerSkill4;
+	ImageView playerCDR;
 	ImageView playerLevelUp;
 
 	TextView playerUltiCD;
@@ -35,7 +35,6 @@ public class PlayerController {
 	TextView playerSkill1CD;
 	TextView playerSkill2CD;
 	TextView playerSkill3CD;
-	TextView playerSkill4CD;
 	TextView playerLevel;
 
 	CountDownTimer playerUltiTimer;
@@ -54,7 +53,7 @@ public class PlayerController {
 		playerSkill1 = (ImageView) player.findViewById(R.id.playerSkill1);
 		playerSkill2 = (ImageView) player.findViewById(R.id.playerSkill2);
 		playerSkill3 = (ImageView) player.findViewById(R.id.playerSkill3);
-		playerSkill4 = (ImageView) player.findViewById(R.id.playerSkill4);
+		playerCDR = (ImageView) player.findViewById(R.id.playerCDR);
 		playerLevelUp = (ImageView) player.findViewById(R.id.playerLevel);
 
 		playerUltiCD = (TextView) player.findViewById(R.id.playerUltiTimer);
@@ -63,17 +62,7 @@ public class PlayerController {
 		playerSkill1CD = (TextView) player.findViewById(R.id.playerSkill1Timer);
 		playerSkill2CD = (TextView) player.findViewById(R.id.playerSkill2Timer);
 		playerSkill3CD = (TextView) player.findViewById(R.id.playerSkill3Timer);
-		playerSkill4CD = (TextView) player.findViewById(R.id.playerSkill4Timer);
 		playerLevel = (TextView) player.findViewById(R.id.playerLevelCount);
-
-		playerPicture = (ImageView) player.findViewById(R.id.playerPicture);
-		playerUlti = (ImageView) player.findViewById(R.id.playerUlti);
-		playerSpell1 = (ImageView) player.findViewById(R.id.playerSpell1);
-		playerSpell2 = (ImageView) player.findViewById(R.id.playerSpell2);
-		playerSkill1 = (ImageView) player.findViewById(R.id.playerSkill1);
-		playerSkill2 = (ImageView) player.findViewById(R.id.playerSkill2);
-		playerSkill3 = (ImageView) player.findViewById(R.id.playerSkill3);
-		playerSkill4 = (ImageView) player.findViewById(R.id.playerSkill4);
 
 		playerUltiCancel = (ImageView) player
 				.findViewById(R.id.playerUltiCancel);
@@ -96,7 +85,7 @@ public class PlayerController {
 				R.drawable.no));
 		playerSkill3.setImageDrawable(rootView.getResources().getDrawable(
 				R.drawable.no));
-		playerSkill4.setImageDrawable(rootView.getResources().getDrawable(
+		playerCDR.setImageDrawable(rootView.getResources().getDrawable(
 				R.drawable.no));
 
 		playerPicture.setOnClickListener(new OnClickListener() {
@@ -135,10 +124,21 @@ public class PlayerController {
 				playerSpell2CD.setText("");
 			}
 		});
+		
+		playerCDR.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if(hero != null) {
+					rootView.startCDRChange(playerPosition);
+				}
+			}
+		});
 
 	}
 
+	public Player hero;
 	public void addBehavior(final Player hero) {
+		this.hero = hero;
 
 		if (playerSpell1Timer != null) {
 			playerSpell1Timer.cancel();
@@ -160,6 +160,7 @@ public class PlayerController {
 		playerUlti.setImageResource(hero.drawableUlti);
 		playerSpell1.setImageResource(hero.drawableSpell1);
 		playerSpell2.setImageResource(hero.drawableSpell2);
+		playerCDR.setImageResource(R.drawable.cdr);
 
 		playerSkill1CD.setText(hero.getCdSkill1() + "");
 		playerSkill2CD.setText(hero.getCdSkill2() + "");

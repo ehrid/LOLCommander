@@ -205,19 +205,10 @@
                     android:layout_margin="@dimen/player_space_small" >
 
                     <ImageView
-                        android:id="@+id/playerSkill4"
+                        android:id="@+id/playerCDR"
                         android:layout_width="@dimen/player_skill_size"
                         android:layout_height="@dimen/player_skill_size"
                         android:src="@drawable/no" />
-
-                    <TextView
-                        android:id="@+id/playerSkill4Timer"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:textColor="@color/text_red"
-                        android:textSize="@dimen/player_text_skill_size"
-                        android:textStyle="bold" />
                 </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
